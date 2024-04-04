@@ -32,5 +32,4 @@ Team One - Spring 2024 page 1 of 2
 demonstrate our commitment to addressing the specific needs of diverse student populations. Ulti-
 mately, KLUTCH aims to leave a lasting mark, providing a valuable resource for future generations of
 students and contributing significantly to the continuous enhancement of the campus community.
-Team One - Spring 2024 page 2 of 2
 
