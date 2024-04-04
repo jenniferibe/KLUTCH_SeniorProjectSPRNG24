@@ -1,7 +1,7 @@
 # KLUTCH
 A web-application designed to increase interconnectivity at NCAT through social, academic, and professional means.
 
-PRODUCT DESCRIPTION
+PRODUCT DESCRIPTION:
 In the vibrant environment of North Carolina Agricultural and Technical State University (NCAT), ef-
 fective communication and collaboration among students are integral to fostering a thriving academic
 community. However, despite the presence of numerous social media platforms and on-campus forums,
@@ -20,7 +20,7 @@ individuals, exchange textbooks and notes, form study groups, offer tutoring ser
 and access exclusive student-centric deals on campus. Lastly, they will be able to promote student-run
 businesses and build a genuine connection with their audience.
 
-PRODUCT SCOPE
+PRODUCT SCOPE:
 From our perspective, we see KLUTCH as more than just a senior project but a potential gift to our
 campus community, a creation that comes from our shared realization of the genuine need for stronger
 student connections. Imagine a dynamic platform where academic, social, and entrepreneurial aspects
