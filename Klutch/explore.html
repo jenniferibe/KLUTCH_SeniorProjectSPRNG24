@@ -27,18 +27,22 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
 </head>
 
-<body class="page-explore">
 
+
+
+<body class="page-explore">
   <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="d-flex align-items-center">Nova</h1>
+        <img src="assets/img/KLUTCHlogo.png" alt="">
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -46,264 +50,184 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="explore.html" class="active">Explore</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="explore.html" class="active">EXPLORE</a></li>
+          <li><a href="login.html">LOGIN</a></li>
         </ul>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
 
+
+
   <main id="main">
+   <!-- ======= Swiper for Brand Spotlight ======= -->
+  <div class="carousel slide" id="carouselDemo" data-bs-wrap="true" data-bs-ride="carousel">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/explore-header.jpg');">
-      <div class="container position-relative d-flex flex-column align-items-center">
-
-        <h2>explore</h2>
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>explore</li>
-        </ol>
-
-      </div>
-    </div><!-- End Breadcrumbs -->
-
-    <!-- ======= Explore Section ======= -->
-    <section id="explore" class="explore">
-      <div class="container" data-aos="fade-up">
-
-        <div class="explore-isotope" data-explore-filter="*" data-explore-layout="masonry" data-explore-sort="original-order">
-
-          <ul class="explore-flters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End explore Filters -->
-
-          <div class="row gy-4 explore-container" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="col-lg-4 col-md-6 explore-item filter-app">
-              <img src="assets/img/explore/app-1.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>App 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/app-1.jpg" title="App 1" data-gallery="explore-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-product">
-              <img src="assets/img/explore/product-1.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Product 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/product-1.jpg" title="Product 1" data-gallery="explore-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-branding">
-              <img src="assets/img/explore/branding-1.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Branding 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/branding-1.jpg" title="Branding 1" data-gallery="explore-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-books">
-              <img src="assets/img/explore/books-1.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Books 1</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/books-1.jpg" title="Branding 1" data-gallery="explore-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-app">
-              <img src="assets/img/explore/app-2.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>App 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/app-2.jpg" title="App 2" data-gallery="explore-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-product">
-              <img src="assets/img/explore/product-2.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Product 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/product-2.jpg" title="Product 2" data-gallery="explore-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-branding">
-              <img src="assets/img/explore/branding-2.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Branding 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/branding-2.jpg" title="Branding 2" data-gallery="explore-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-books">
-              <img src="assets/img/explore/books-2.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Books 2</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/books-2.jpg" title="Branding 2" data-gallery="explore-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-app">
-              <img src="assets/img/explore/app-3.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>App 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/app-3.jpg" title="App 3" data-gallery="explore-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-product">
-              <img src="assets/img/explore/product-3.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Product 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/product-3.jpg" title="Product 3" data-gallery="explore-gallery-product" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-branding">
-              <img src="assets/img/explore/branding-3.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Branding 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/branding-3.jpg" title="Branding 2" data-gallery="explore-gallery-branding" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-            <div class="col-lg-4 col-md-6 explore-item filter-books">
-              <img src="assets/img/explore/books-3.jpg" class="img-fluid" alt="">
-              <div class="explore-info">
-                <h4>Books 3</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-                <a href="assets/img/explore/books-3.jpg" title="Branding 3" data-gallery="explore-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                <a href="explore-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-              </div>
-            </div><!-- End explore Item -->
-
-          </div><!-- End explore Container -->
-
+    <div class="carousel-inner" data-bs-interval = "3000">
+      <div class="carousel-item active">
+        <img src="assets/img/klutch-custom-gems-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> GemCustoms </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
         </div>
-
       </div>
-    </section><!-- End explore Section -->
 
-  </main><!-- End #main -->
+      <div class="carousel-item" data-bs-interval = "3000">
+        <img src="assets/img/klutch-alexusphoto-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> Alexusbphoto </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
+        </div>
+      </div>
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+      <div class="carousel-item" data-bs-interval = "3000">
+        <img src="assets/img/klutch-artboysco-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> Artboysco </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
+        </div>
+      </div>
 
-    <div class="footer-content">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <span>Explore</span>
-            </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links d-flex  mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="carousel-item" data-bs-interval = "3000">
+        <img src="assets/img/klutch-gingerd-beauty-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> Ginger'd-Beauty </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval = "3000">
+        <img src="assets/img/klutch-soul-ties-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> SoulTies </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval = "3000">
+        <img src="assets/img/klutch-prettiesinminks-adjusted.jpg" class="w-100">
+        <div class="carousel-caption">
+          <h3> PrettiesinMinks </h3>
+          <p> Looking for unique and stylish custom footwear? Explore GemCustoms for a collection of delightful designs. @customsgem</p>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" 
+    type ="button" 
+    data-bs-target="#carouselDemo"
+    data-bs-slide="prev"> 
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" 
+    type ="button" 
+    data-bs-target="#carouselDemo"
+    data-bs-slide="next"> 
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+    <div class="carousel-indicators">
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="0"></button>
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="1"></button>
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="2"></button>
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="3"></button>
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="4"></button>
+      <button type="button" class="active" data-bs-target="#carouselDemo" data-bs-slide-to="5"></button>
+    </div>
+
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+    <!-- ======= Swiper for Study Groups ======= -->
+    <section class="study-group-swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <div class="card">
+            <div class="card__image">
+              <img src="/assets/img/klutch-study-group-1.png" alt="Study Group">
             </div>
-          </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-dash"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bi bi-dash"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-dash"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-
-          </div>
-
+            <div class="card__content">
+              <span class="card__title">MATH 132</span> <br>
+              <span class="card__memcount">3 members</span> <br>
+              <button class="card__btn">Join</button>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="footer-legal">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Nova</span></strong>. All Rights Reserved
+        <div class="card ">
+          <div class="card__image">
+            <img src="/assets/img/klutch-study-group-2.png" alt="Study Group">
+          </div>
+
+          <div class="card__content">
+            <span class="card__title">COMP 322</span> <br>
+            <span class="card__memcount">5 members</span> <br>
+            <button class="card__btn">Join</button>
+          </div>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nova-bootstrap-business-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+
+        <div class="card ">
+          <div class="card__image">
+            <img src="/assets/img/klutch-study-group-3.png" alt="Study Group">
+          </div>
+
+          <div class="card__content">
+            <span class="card__title">HIST 207</span> <br>
+            <span class="card__memcount">2 members</span> <br>
+            <button class="card__btn">Join</button>
+          </div>
         </div>
-      </div>
-    </div>
-  </footer><!-- End Footer --><!-- End Footer -->
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <div class="card ">
+          <div class="card__image">
+            <img src="/assets/img/klutch-study-group-4.png" alt="Study Group">
+          </div>
 
-  <div id="preloader"></div>
+          <div class="card__content">
+            <span class="card__title">CHEM 106</span> <br>
+            <span class="card__memcount">6 members</span> <br>
+            <button class="card__btn">Join</button>
+          </div>
+        </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+        <div class="card ">
+          <div class="card__image">
+            <img src="/assets/img/klutch-study-group-5.png" alt="Study Group">
+          </div>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+          <div class="card__content">
+            <span class="card__title">MGMT 221</span> <br>
+            <span class="card__memcount">1 members</span> <br>
+            <button class="card__btn">Join</button>
+          </div>
+        </div>
 
-</body>
+        <div class="card ">
+          <div class="card__image">
+            <img src="/assets/img/klutch-study-group-6.png" alt="Study Group">
+          </div>
 
+          <div class="card__content">
+            <span class="card__title">ECON 201</span> <br>
+            <span class="card__memcount">4 members</span> <br>
+            <button class="card__btn">Join</button>
+          </div>
+        </div>
+
+
+      </div>   <!-- End of Swiper for Study Groups -->
+    </section>
+  </main>
+
+
+  </body>
 </html>
