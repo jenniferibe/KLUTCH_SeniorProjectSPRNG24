@@ -114,7 +114,28 @@
                <br>
                 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
                 <a href="signup.html" class="signupclick "> <span style="color: #ffffff">Don't have an account?</span> <span style="font-weight: 500px;">Sign Up</span></a>               
-  
+              
+              
+              <script>
+                  const joinNowBtn = document.getElementById('Sign in');
+                
+                  joinNowBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const email = 'example@aggies.ncat.edu.com'; // Replace with user input
+                    const password = 'password123'; // Replace with user input
+                    const name = 'John Doe'; // Replace with user input
+                
+                    fetch('http://localhost:3000/login', {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ email, password, name })
+                    })
+                   .then(response => response.json())
+                   .then(data => console.log(data))
+                   .catch(error => console.error(error));
+                  });
+                </script>
+                
             </form>
           </div>
         </div>
