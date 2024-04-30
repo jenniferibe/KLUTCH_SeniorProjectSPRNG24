@@ -1,0 +1,52 @@
+CREATE DATABASE IF NOT EXISTS klutch;
+USE klutch; 
+
+CREATE TABLE IF NOT EXISTS users (
+    accountID INT NOT NULL AUTO_INCREMENT,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL,
+    username VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(16) NOT NULL UNIQUE,
+    datecreated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(accountID)
+);
+
+CREATE TABLE IF NOT EXISTS  userGroup(
+    groupID INT NOT NULL AUTO_INCREMENT,
+    groupName VARCHAR(255) NOT NULL,
+    PRIMARY KEY (groupID)
+);
+
+CREATE TABLE IF NOT EXISTS posts(
+    postID INT NOT NULL AUTO_INCREMENT,
+    datePosted TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    accountID INT NOT NULL,
+    groupID INT NOT NULL,
+    postContent VARCHAR(255) NOT NULL,
+    PRIMARY KEY (postID),
+    FOREIGN KEY (accountID) REFERENCES users(accountID),
+    FOREIGN KEY (groupID) REFERENCES userGroup(groupID)
+);
+
+CREATE TABLE IF NOT EXISTS comments(
+commentID INT NOT NULL AUTO_INCREMENT,
+dateCreated TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+postID INT NOT NULL,
+PRIMARY KEY (commentID),
+FOREIGN KEY (postID) REFERENCES posts(postID)
+);
+
+
+CREATE TABLE IF NOT EXISTS comment_accounts (
+    commentID INT NOT NULL,
+    accountID INT NOT NULL,
+    PRIMARY KEY (commentID),
+    FOREIGN KEY (commentID) REFERENCES comments(commentID),
+    FOREIGN KEY (accountID) REFERENCES users(accountID)
+);
+
+
+
+
+
