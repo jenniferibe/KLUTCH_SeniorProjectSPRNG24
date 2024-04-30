@@ -624,7 +624,7 @@ span {
 }
 
 .preview .slides {
-  background-color: #232323;
+  background-color: #2a2929;
 }
 
 .preview h3 {
@@ -741,7 +741,7 @@ span {
 }
 
 .services .slides {
-  background-color: #232323;
+  background-color: #2a2929;
 }
 
 .services h3 {
@@ -803,10 +803,6 @@ span {
   padding: 0 0 80px 0;
 }
 
-
-/*-----------------------------------------------------
-# ISSUE WITH JOIN NOW BUTTON (ITS NOT IN THE CENTER)!!
-------------------------------------------------------*/
 .services .btn-join-now {
   font-family: var(--font-primary);
   font-weight: 1000;
@@ -826,27 +822,111 @@ span {
 
 
 /*--------------------------------------------------------------
-# Explore Section
+# Dashboard Section
 --------------------------------------------------------------*/
-.page-explore {
+.page-dashboard {
   background-color: rgb(0, 0, 0);
 }
 
 
-/* Slider for Brand Spotlight */
+
+/* Slider Section for Brand Spotlight */
 .carousel-inner {
   margin-top: 5%;
 }
 
-.carousel-item{
+.carousel-item {
   width: 100%;
   height: 550px;
+}
+
+.carousel-item h3{
+  font-family: var(--font-primary);
+  font-weight: bolder;
+}
+
+.carousel-item p{
+  font-family: var(--font-primary);
+  font-weight: 500;
+}
+
+.carousel-item h5{
+  font-family: var(--font-primary);
+  font-weight: bold;
+  line-height: 0.8;
 }
 
 
 
 
-/* Slider for Orgs */
+/* Section for for Orgs */
+.container-orgs {
+  position: relative;
+  width: 100%;
+  max-width: 410px;
+  padding: 2em 1em;
+  display:inline-block;
+}
+
+.container-orgs img {
+  border: 1px solid var(--color-primary);
+  width: 100%;
+  height: 300px;
+  border-radius: 2em;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered h3 {
+  font-size: 17.5px;
+  font-weight: 900;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.centered p {
+  font-size: 14.5px;
+  font-weight: 900;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.container-orgs .view-btn-org {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #FFCF00;
+  color: black;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-btn-org {
+  width: 120px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.container-orgs .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+/* Section for Study Groups */
 .study-group-swiper {
   width: 100%;
 }
@@ -867,8 +947,7 @@ span {
   box-shadow: 0 0 2rm rgba(0, 0, 0, 0.2);
   padding: 2em 1em;
   border: 1px solid var(--color-primary);
-  margin-left: 50px;
-
+  margin-left: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -918,7 +997,7 @@ span {
   color: #000000;
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 900;
   border: none;
   padding: .5em;
   border-radius: .5em;
@@ -974,12 +1053,12 @@ input[type=text], input[type=email] {
 }
 
 /* Input field for Password */
-  input[type=text], input[type=password] {
-  width: 100%;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-  font-size: 16px;
+input[type=text], input[type=password] {
+width: 100%;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+font-size: 16px;
 }
 
 hr {
@@ -1014,19 +1093,40 @@ button {
   font-weight: 800;
 }
 
+
+
+/* Style for "Sign In" and "Create an Account" buttons */
+button[type=submit] {
+  background-color: #232323;
+  color:#ffffff;
+  border-radius: 8px;
+}
+/* Hover Color for buttons */
+button[type=submit]:hover {
+  opacity:1;
+  color:#000000;
+  background-color: #FFCF00;
+}
+
+/* Style for "Sign In/Continue with Google" buttons */
 .googlebtn {
-  background-color: #868686;
+  background-color: #4c4c4c;
   border-radius: 8px;
   
 }
+/* Hover Color for buttons */
+button[type=google]:hover {
+  opacity:1;
+  color:#FFCF00
+}
 
 .signupclick {
-  justify-content: center;
   text-align: center;
+  justify-content: center;
 }
 
 button:hover {
-  opacity:1;
+  opacity:2;
 }
 
 /* Clear floats */
@@ -1043,3 +1143,31 @@ button:hover {
     width: 100%;
   }
 }
+
+
+/*--------------------------------------------------------------
+# Onboarding
+--------------------------------------------------------------*/
+/* Set a style for all buttons */
+button[type=select] {
+  background-color: #1d1d1d;
+  border: #FFCF00;
+  color:rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 800;
+  padding: 25px 50px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+/* Hover Color for buttons */
+button[type=select]:hover {
+  opacity:1;
+  color:#000000;
+  background-color: #FFCF00;
+}
+
+.label {
+  font-weight: 800px;
+}
+
