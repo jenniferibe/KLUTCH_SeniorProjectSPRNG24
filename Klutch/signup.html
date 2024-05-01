@@ -106,7 +106,44 @@
   
             <!-- Submit Button -->
             <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">Create an Account</button>
-  
+            
+            <script>
+              const signupForm = document.getElementById('signupForm');
+            
+              signupForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+            
+                const firstName = signupForm.elements['firstName'].value;
+                const lastName = signupForm.elements['lastName'].value;
+                const username = signupForm.elements['username'].value;
+                const email = signupForm.elements['email'].value;
+                const password = signupForm.elements['password'].value;
+            
+                fetch('/api/auth/signup', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ firstName, lastName, username, email, password })
+                })
+             .then(response => response.json())
+             .then(data => {
+                  if (data.message) {
+                    // Display a success message
+                    alert(data.message);
+                    // Redirect the user to the login page
+                    window.location.href = '/login.html';
+                  } else {
+                    // Display an error message
+                    alert('Error: ' + data.error);
+                  }
+                })
+             .catch(error => {
+                  // Display an error message
+                  alert('Error: ' + error);
+                });
+              });
+            </script>
             <hr>
 
           <!-- Continue Button -->
