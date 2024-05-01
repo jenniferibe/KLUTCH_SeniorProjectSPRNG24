@@ -1,10 +1,25 @@
-const mongoose = require('mongoose');
-
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'klutch'
 });
 
-module.exports = mongoose.model('User', userSchema);
+const User = connection.define('User', {
+  username: {
+    type: mysql.STRING,
+    allowNull: false,
+  },
+  email: {
+    type: mysql.STRING,
+    allowNull: false,
+    unique: true,
+  },
+  password: {
+    type: mysql.STRING,
+    allowNull: false,
+  },
+});
+
+module.exports = User;
