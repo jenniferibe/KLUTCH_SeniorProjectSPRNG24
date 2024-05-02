@@ -1,32 +1,66 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const mysql = require('mysql');
-
+const express = require("express");
 const app = express();
+const mysql = require("mysql");
+const dotenv = require("dotenv");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const userRoute = require("./routes/users"); //"./routes/users"
+const authRoute = require("./Auth");
+const postRoute = require("./routes/posts");
+const multer = require("multer");
+const path = require("path");
+const cors = require("cors");
 
-// Connect to MySQL
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'password',
-  database: 'klutch',
+dotenv.config();
+
+const connection = mysql.Klutch({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
 });
 
-connection.connect((error) => {
-  if (error) throw error;
-  console.log('Connected to the database');
+connection.connect((err) => {
+  if (err) throw err;
+  console.log("Connected to the database");
 });
 
-// Middleware
+app.use("/images", express.static(path.join(__dirname, "public/images")));
+
+
+console.log(connection.state);
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
 
-// Import routes
-const authRoutes = require('./routes/auth');
-app.use('/api/auth', authRoutes);
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, "public/images");
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    },
+});
 
-// Start server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (res, req) => {
+    try {
+        //return res.status(200).json("file uploaded");
+    }
+    catch (err) {
+        console.log(err);
+    }
+});
+
+app.use("/api/users", userRoute);
+app.use("/api/auth", authRoute);
+app.use("/api/posts", postRoute);
+
+
+app.get("/", (req, res) => {
+    res.send("Welcome to homepage")
+})
+app.listen(process.env.PORT || 3000, () => {
+    console.log("Backend Server initiated")
+})
