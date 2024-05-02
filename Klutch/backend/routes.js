@@ -57,6 +57,25 @@ app.post('/signup', async (req, res) => {
   res.status(201).json({ message: 'User created successfully' });
 });
 
+
+app.post('/api/login', (req, res) => {
+  // Authenticate the user
+  const user = authenticateUser(req.body.username, req.body.password);
+
+  if (user) {
+    // Store the user's ID in the session
+    req.session.userId = user.id;
+
+    // Send a response to the client
+    res.status(200).json({ message: 'Login successful' });
+  } else {
+    // Send an error response to the client
+    res.status(401).json({ message: 'Invalid username or password' });
+  }
+});
+
+
+
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
