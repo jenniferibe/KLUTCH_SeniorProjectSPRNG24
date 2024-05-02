@@ -1,23 +1,21 @@
-const express = require('express');
+//IMPORTS
+const express = require("express");
 const app = express();
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-
+const cors = require("cors");
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/klutch', { useNewUrlParser: true, useUnifiedTopology: true });
+mysql.connect('mysql://localhost/klutch', { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Define the user model
-const userSchema = new mongoose.Schema({
+const userSchema = new mysql.Schema({
   email: String,
   password: String,
   name: String
 });
 
-const User = mongoose.model('User', userSchema);
+const User = mysql.model('User', userSchema);
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(cors());
 
 // Routes
@@ -48,7 +46,7 @@ app.post('/login', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
-});
+//app.listen(3000, () => {
+ // console.log('Server listening on port 3000');
+//});
 
